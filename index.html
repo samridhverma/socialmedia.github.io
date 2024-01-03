@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Podcast Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #212121; /* Dark background color */
+            color: #ffffff; /* White text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333333; /* Dark grey background color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: #ffffff; /* White text color */
+        }
+
+        .navbar-toggler-icon {
+            background-color: #ffffff; /* White color for the toggler icon */
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.2rem;
+            color: #ffffff; /* White text color */
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffd700; /* Gold color on hover */
+        }
+
+        .container {
+            margin-top: 80px;
+        }
+
+        .welcome-section {
+            padding: 150px 0;
+            text-align: center;
+            background-color: #333333; /* Dark grey background color */
+            color: #ffffff; /* White text color */
+        }
+
+        .welcome-content {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 15px;
+            animation: fadeInUp 1s ease-in-out; /* Added animation */
+        }
+
+        .logo {
+            max-width: 150px; /* Adjusted logo size */
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #ffd700; /* Gold color for the button */
+            color: #333333; /* Dark text color */
+            border-color: #ffd700;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #ffd700; /* Gold color */
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            color: #333333; /* Dark text color */
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 60px;
+            }
+
+            .welcome-section {
+                padding: 100px 0;
+            }
+
+            .btn-primary {
+                padding: 10px 20px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Reels Section Enhancements */
+        #reels .card {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        #reels .card:nth-child(even) {
+            animation-delay: 0.5s; /* Delay even cards for a staggered effect */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Your Podcast</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#welcome">Welcome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#video">Video Podcasts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shorts">Shorts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reels">Reels</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="welcome-section" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="welcome-content">
+                <img src="https://samridhverma6.files.wordpress.com/2024/01/motivation-png-isolated-hd.png" alt="Motivation Image" class="img-fluid logo" />
+                <h2>Welcome to Your Podcast</h2>
+                <p class="lead">Laugh, learn, and enjoy the best podcasts, videos, shorts, and reels.</p>
+                <a href="#home" class="btn btn-primary btn-lg">Let's Have Fun</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Section -->
+    <section id="home" class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="section-title">Home Section</div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="https://placekitten.com/400/300" class="card-img-top" alt="Sample Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Podcast Episode 1</h5>
+                        <p class="card-text">Join the laughter with our first hilarious podcast episode!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards or content as needed -->
+        </div>
+    </section>
+
+    <!-- Video Podcasts Section -->
+    <section id="video" class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="section-title">Video Podcasts Section</div>
+        <!-- Add your content for the video podcasts section here -->
+    </section>
+
+    <!-- Shorts Section -->
+    <section id="shorts" class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="section-title">Shorts Section</div>
+        <!-- Add your content for the shorts section here -->
+    </section>
+
+    <!-- Reels Section -->
+    <section id="reels" class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="section-title">Reels Section</div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="https://placekitten.com/400/300" class="card-img-top" alt="Reel Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Reel 1</h5>
+                        <p class="card-text">Enjoy this entertaining reel!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="https://placekitten.com/400/301" class="card-img-top" alt="Reel Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Reel 2</h5>
+                        <p class="card-text">Another exciting reel for you!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards or content as needed -->
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXWgCiufIc9FSlG9VdL8UEkByQpN2a9063w6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-btTSV2VBhfzhfLlAq3sFasDujGAfmFclko1bgdoDaBNA2F4p5b7fKViMvqf+f0bA" crossorigin="anonymous"></script>
+
+    <!-- AOS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
